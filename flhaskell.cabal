@@ -26,6 +26,7 @@ source-repository head
 library
   exposed-modules:
       Lib
+      Speller
       Starman
   other-modules:
       Paths_flhaskell
