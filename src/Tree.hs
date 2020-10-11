@@ -1,6 +1,6 @@
 module Tree
 (
-  Tree, treeDepth, treeSum
+  Tree(Leaf, Node), treeDepth, treeInsert, treeSum, treeToList, t1, t2
 ) where
     
 data Tree = Leaf | Node Int Tree Tree deriving (Eq, Show)
@@ -38,10 +38,14 @@ treeInsert (Node x t1 t2) val
                   t1
                   (treeInsert t2 val))
 
+treeToList :: Tree -> [Int]
+treeToList Leaf = []
+treeToList (Node x t1 t2) = (treeToList t1) ++ [x] ++ (treeToList t2)
 
-t = Node 9 Leaf Leaf
 
-t = (Node 9
+t1 = Node 9 Leaf Leaf
+
+t2 = (Node 9
         (Node 5 (Node 3 Leaf Leaf) (Node 7 Leaf Leaf))
         (Node 17
             (Node 14 Leaf Leaf)

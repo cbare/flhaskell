@@ -28,6 +28,7 @@ library
       Lib
       Speller
       Starman
+      Tree
   other-modules:
       Paths_flhaskell
   hs-source-dirs:
