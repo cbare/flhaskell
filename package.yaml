@@ -35,6 +35,9 @@ executables:
     - -with-rtsopts=-N
     dependencies:
     - flhaskell
+    - parsec >= 3.1.14.0
+    - QuickCheck
+
 
 tests:
   flhaskell-test:
@@ -46,3 +49,5 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - flhaskell
+    - parsec >= 3.1.14.0
+    - quickcheck
